@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$dark-blue-main: hsl(217, 54%, 11%);
+$dark-blue-card: hsl(216, 50%, 16%);
+$dark-blue-line: hsl(215, 32%, 27%);
+$White: hsl(0, 0%, 100%);
+$font-size: 18px;
+$border-radius: 0.8em;
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Outfit";
+}
+
+body {
+	background-color: $dark-blue-main;
+	font-size: $font-size;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+	height: 100mvh;
+	overflow: hidden;
+	color: $White;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	margin-bottom: 1em;
+}
+
+.card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	width: 20rem;
+	background-color: $dark-blue-card;
+	border-radius: $border-radius;
+	font-weight: 300;
+	color: $soft-blue;
+	padding: 1.4em;
+	font-size: 1rem;
+
+	.user {
+		display: flex;
+		align-items: center;
+		img {
+			border: 1px solid $White;
+			border-radius: 50%;
+			width: 1.8em;
+			margin: 0;
+			margin-right: 0.5em;
+		}
+
+		span {
+			color: $White;
+		}
+	}
+
+	.details {
+		display: flex;
+		flex-direction: column;
+		gap: 0.7em;
+
+		& > p {
+			line-height: 1.5rem;
+		}
+
+		.eth {
+			color: $cyan;
+			font-weight: bold;
+		}
+
+		.data {
+			display: flex;
+			justify-content: space-between;
+			span {
+				display: flex;
+				align-items: center;
+				gap: 0.2rem;
+			}
+		}
+	}
+
+	h1 {
+		color: $White;
+		font-size: 1.4rem;
+		text-align: left;
+	}
+
+	h1:hover,
+	.user span:hover {
+		color: $cyan;
+		cursor: pointer;
+	}
+
+	img {
+		width: 100%;
+		border-radius: $border-radius;
+		margin-bottom: 1em;
+	}
+
+	.eye {
+		position: absolute;
+		margin: auto;
+		width: 100%;
+		height: calc(100% - 1.2em);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		visibility: hidden;
+	}
+
+	.image:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba($cyan, 0.5);
+        height: calc(100% - 1.2em);
+        border-radius: $border-radius;
+        visibility: hidden;
+	}
+
+	.image:hover .eye {
+		visibility: visible;
+		cursor: pointer;
+	}
+	.image:hover:before {
+		visibility: visible;
+		cursor: pointer;
+	}
+
+	.image {
+		position: relative;
+	}
+
+	hr {
+		border: $dark-blue-line solid 1px;
+	}
+}

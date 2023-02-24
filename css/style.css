@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit";
+}
+
+body {
+  background-color: hsl(217deg, 54%, 11%);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  height: 100mvh;
+  overflow: hidden;
+  color: hsl(0deg, 0%, 100%);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 1em;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 20rem;
+  background-color: hsl(216deg, 50%, 16%);
+  border-radius: 0.8em;
+  font-weight: 300;
+  color: hsl(215deg, 51%, 70%);
+  padding: 1.4em;
+  font-size: 1rem;
+}
+.card .user {
+  display: flex;
+  align-items: center;
+}
+.card .user img {
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  width: 1.8em;
+  margin: 0;
+  margin-right: 0.5em;
+}
+.card .user span {
+  color: hsl(0deg, 0%, 100%);
+}
+.card .details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+.card .details > p {
+  line-height: 1.5rem;
+}
+.card .details .eth {
+  color: hsl(178deg, 100%, 50%);
+  font-weight: bold;
+}
+.card .details .data {
+  display: flex;
+  justify-content: space-between;
+}
+.card .details .data span {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.card h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.4rem;
+  text-align: left;
+}
+.card h1:hover,
+.card .user span:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+.card img {
+  width: 100%;
+  border-radius: 0.8em;
+  margin-bottom: 1em;
+}
+.card .eye {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: calc(100% - 1.2em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+.card .image:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 255, 247, 0.5);
+  height: calc(100% - 1.2em);
+  border-radius: 0.8em;
+  visibility: hidden;
+}
+.card .image:hover .eye {
+  visibility: visible;
+  cursor: pointer;
+}
+.card .image:hover:before {
+  visibility: visible;
+  cursor: pointer;
+}
+.card .image {
+  position: relative;
+}
+.card hr {
+  border: hsl(215deg, 32%, 27%) solid 1px;
+}/*# sourceMappingURL=style.css.map */
